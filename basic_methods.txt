@@ -1,0 +1,29 @@
+protected void registrarUsuario(object sender, EventArgs e)
+  {
+          //utilizamos el procedimiento alamacenado insertarusuarios
+          SqlCommand cmd = new SqlCommand("insertarusurios", cn);
+          //especificamos que el comando es un procedimiento almacenado
+          cmd.CommandType = CommandType.StoredProcedure;
+          //creamos los parametros que usaremos
+          cmd.Parameters.Add("@nombre", SqlDbType.VarChar);
+          cmd.Parameters.Add("@apellido", SqlDbType.VarChar);
+          cmd.Parameters.Add("@pais", SqlDbType.VarChar);
+          //asignamos el valor de los textbox a los parametros
+          cmd.Parameters["@nombre"].Value = TextBox1.Text;
+          cmd.Parameters["@apellido"].Value = TextBox2.Text;
+          cmd.Parameters["@pais"].Value = TextBox3.Text;
+          //abrimos conexion
+          cn.Open();
+          //ejecutamos la instruccion con ExcecuteNonQuerry indicando que no retorna registros.
+          cmd.ExecuteNonQuery();
+          Label1.Text = "Usuario ingresado...";
+          //cerramos conexion
+          cn.Close();
+          //cargamos los datos nuevamente
+          cargardatos();
+          //limpiamos los textbox
+          TextBox1.Text = "";
+          TextBox2.Text = "";
+          TextBox3.Text = "";
+ 
+  }
