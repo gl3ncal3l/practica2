@@ -88,3 +88,6 @@ internal bool IsLoggedIn(string user, string pass)
                 } 
             }
 		}
+
+
+!!!!!!Funciones revisadas exitosamente!!!!!!!!!!!!!!
