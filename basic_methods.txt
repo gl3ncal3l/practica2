@@ -1,4 +1,6 @@
 %%%%%%%%PROBANDO RAMAS%%%%%%
+agregando mas cosas
+
 protected void registrarUsuario(object sender, EventArgs e)
   {
           //utilizamos el procedimiento alamacenado insertarusuarios
