@@ -1,6 +1,9 @@
 %%%%%%%%PROBANDO RAMAS%%%%%%
 agregando mas cosas
 
+este mensaje fue agregado en feature 1
+
+
 protected void registrarUsuario(object sender, EventArgs e)
   {
           //utilizamos el procedimiento alamacenado insertarusuarios
